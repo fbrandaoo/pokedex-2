@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex - Fernando</title>
+    <link rel="icon" href="https://rebrand.ly/fb/icon">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <form name="pokemons" class="form">
+            <input type="search" class="search" id="search" list="pokemonsNames" autocomplete="on">
+            <datalist id="pokemonsNames">
+            </datalist>
+        </form>
+        <div class="card">
+            <div class="pokemonType"><span id="pokemonType"></span></div>
+            <img src="" alt="Loading..." class="pokemonSprite" id="pokemonSprite">
+            <span class="pokemonId" id="pokemonId"></span>
+            <h1 class="pokemonName" id="pokemonName"></h1>
+        </div>
+        <button class="btn" id="btn">Sortear</button>
+</body>
+</html>

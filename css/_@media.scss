@@ -1,0 +1,40 @@
+@media (max-height: 840px) {
+    .card, .btn, .form {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-height: 780px) {
+    .card, .btn, .form {
+        transform: scale(0.8);
+    }
+
+}
+
+@media (max-height: 720px) {
+    .card, .btn, .form {
+        transform: scale(0.7);
+    }
+
+}
+
+@media (max-height: 660px) {
+
+    .btn {
+        position:absolute;
+        top: 0;
+    }
+
+    .card {
+        transform: translateY(20%);
+        max-height: 300px;
+    }
+    .pokemonId{
+        position: absolute;
+        bottom: 0;
+    }
+    .pokemonName {
+        position: absolute;
+        bottom: 0;
+    }
+}
