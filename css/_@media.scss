@@ -20,21 +20,20 @@
 
 @media (max-height: 660px) {
 
+    .form {
+        transform: scale(0.7) translateY(-50px);
+    }
     .btn {
         position:absolute;
         top: 0;
     }
 
     .card {
-        transform: translateY(20%);
-        max-height: 300px;
+        transform: scale(0.6) translateY(85px);
+        max-height: 255px;
     }
-    .pokemonId{
-        position: absolute;
-        bottom: 0;
-    }
-    .pokemonName {
-        position: absolute;
-        bottom: 0;
+    #pokemonId{
+        left: 0;
+        transform: translateX(50px);
     }
 }
