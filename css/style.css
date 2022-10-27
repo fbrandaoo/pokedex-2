@@ -84,7 +84,7 @@ body {
 
 .pokemonId {
   position: absolute;
-  bottom: 80px;
+  bottom: 95px;
   left: 50%;
   transform: translateX(-50%);
 }
