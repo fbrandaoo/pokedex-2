@@ -1,7 +1,6 @@
 const BTN = document.querySelector('#btn');
-const search = document.querySelector('#search');
 const form = document.querySelector('.form');
-const dataList = document.querySelector('#pokemonsNames');
+const select = document.querySelector('#pokemonsNames');
 const URL = pokemon => `https://pokeapi.co/api/v2/pokemon/${pokemon}`
 
 const CARD = document.querySelector('.card');
@@ -14,16 +13,15 @@ const pokemonNames = []
 fetchPokemon(randomNumber());
 loadDataList();
 
-
 for (let i = 1; i <= 150; i++) {
     fetch(URL(i)).then(response => response.json()).then(response => pokemonNames.push(response.name.charAt(0).toUpperCase() + response.name.slice(1).toLowerCase()))
 }
 
 Promise.all(pokemonNames);
 
-function loadDataList() {
-    setTimeout(() => dataList.innerHTML = pokemonNames
-    .map(names => `<option>${names}</option>`).join(''), 2000)
+async function loadDataList() {
+    setTimeout(() => select.innerHTML = pokemonNames
+    .map(names => `<option value="${pokemonNames.indexOf(names) + 1}">${names} #${pokemonNames.indexOf(names) + 1}</option>`).join(''), 2000)
 }
 
 async function fetchPokemon(pokemon){
@@ -52,8 +50,6 @@ BTN.onclick = () => {
 }
 
 form.addEventListener('submit', (e) => {
-
     e.preventDefault();
-    fetchPokemon(search.value.toLowerCase());
-    search.value = null;
+    fetchPokemon(select.value);
 });

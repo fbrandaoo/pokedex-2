@@ -51,9 +51,21 @@ body {
 
 .form {
   position: absolute;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 3fr 1fr;
+  gap: 5px;
   width: 400px;
   height: 64px;
   top: 90px;
+}
+
+#pokemonsNames {
+  height: 100%;
+}
+
+#submit {
+  height: 100%;
 }
 
 .card {
